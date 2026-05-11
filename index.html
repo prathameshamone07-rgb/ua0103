@@ -332,9 +332,19 @@ textarea{resize:vertical;min-height:110px;line-height:1.7}
 .admin-btn-danger{background:transparent;color:#e74c3c;border:1px solid rgba(231,76,60,.3)}
 .admin-btn-danger:hover{background:rgba(231,76,60,.1)}
 .entries-table{background:#1a1a1a;border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
-.table-head{display:grid;grid-template-columns:2fr 1.5fr 1.2fr 1.2fr 1fr 80px;gap:0;padding:.9rem 1.5rem;background:#111;border-bottom:1px solid rgba(255,255,255,.06)}
-.th{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3)}
-.entry-row{display:grid;grid-template-columns:2fr 1.5fr 1.2fr 1.2fr 1fr 80px;gap:0;padding:1rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.04);transition:background .2s;cursor:pointer}
+.table-head,
+.entry-row{
+  display:grid;
+  grid-template-columns:
+    minmax(140px,2fr)
+    minmax(100px,1.2fr)
+    minmax(90px,1fr)
+    minmax(110px,1fr)
+    minmax(90px,1fr)
+    60px;
+  gap:12px;
+  align-items:center;
+}
 .entry-row:last-child{border-bottom:none}
 .entry-row:hover{background:rgba(15,118,110,.06)}
 .td{font-size:.82rem;color:rgba(255,255,255,.65);font-weight:300;display:flex;align-items:center;overflow:hidden}
@@ -914,6 +924,33 @@ footer{padding:2.5rem 1.2rem 1.5rem}
 .stat-edit-btn:hover {
   background:rgba(15,118,110,.3);border-color:var(--teal);
   transform:scale(1.1);
+}
+
+@media(max-width:900px){
+
+  .entries-table{
+    overflow-x:auto;
+    border-radius:12px;
+  }
+
+  .table-head,
+  .entry-row{
+    min-width:700px;
+  }
+
+  .th,
+  .td{
+    white-space:nowrap;
+  }
+
+}
+
+.th{
+  padding-right:12px;
+}
+
+.td{
+  padding-right:12px;
 }
 
 </style>
