@@ -419,15 +419,244 @@ textarea{resize:vertical;min-height:110px;line-height:1.7}
 
 @media(hover:none) and (pointer:coarse){body{cursor:auto}#cursor,#cursor-ring{display:none}}
 @media(max-width:900px){
+
+  /* ── FORM HEADER MOBILE FIX ── */
+.form-header{
+  padding:.9rem 1rem .9rem 4.5rem;
+  gap:.5rem;
+}
+.form-header-logo{
+  font-size:1rem;
+  white-space:nowrap;
+}
+.form-header-tag{
+  font-size:.55rem;
+  letter-spacing:1px;
+  padding:.25rem .6rem;
+  white-space:nowrap;
+}
+
+/* ── FORM HERO BANNER MOBILE ── */
+.form-hero-banner{
+  padding:2.5rem 1.2rem 2rem;
+}
+.form-hero-banner h1{
+  font-size:2rem;
+}
+.form-hero-banner p{
+  font-size:.82rem;
+}
+
+/* ── PROGRESS STEPS MOBILE ── */
+.progress-wrap{
+  padding:1rem 1rem;
+}
+.prog-dot{
+  width:24px;
+  height:24px;
+  font-size:.6rem;
+}
+.prog-label{
+  font-size:.55rem;
+  letter-spacing:.5px;
+}
+
+/* ── FORM CONTAINER MOBILE ── */
+.form-container{
+  padding:2rem 1.2rem 4rem;
+}
+.fsec-num{
+  font-size:2.5rem;
+}
+.fsec-title{
+  font-size:1.3rem;
+}
+
+/* ── FORM NAV BUTTONS MOBILE ── */
+.form-nav{
+  flex-wrap:wrap;
+  gap:.8rem;
+}
+.btn-next{
+  width:100%;
+  justify-content:center;
+}
+.step-counter{
+  width:100%;
+  text-align:center;
+  order:-1;
+}
+  /* ── ADMIN NAV FIX ── */
+.admin-header{
+  padding:1rem 1rem 1rem 1rem;
+  gap:.8rem;
+}
+.admin-logo{
+  font-size:1rem;
+  white-space:nowrap;
+  margin-left:3.5rem;
+}
+
+/* ── STAT CARDS 2x2 GRID ── */
+.admin-stats{
+  grid-template-columns:1fr 1fr !important;
+  gap:.8rem;
+}
+.stat-card{
+  padding:1.2rem;
+}
+.stat-card-num{
+  font-size:1.6rem;
+}
+.stat-card-label{
+  font-size:.6rem;
+  letter-spacing:1px;
+}
+.stat-card-sub{
+  font-size:.68rem;
+}
+.stat-edit-btn{
+  width:22px;
+  height:22px;
+  font-size:.7rem;
+}
+
+/* ── ADMIN TOOLBAR BUTTONS ── */
+.admin-toolbar{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.8rem;
+}
+.admin-toolbar h2{
+  font-size:1.2rem;
+}
+.admin-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.5rem;
+  width:100%;
+}
+.admin-btn{
+  font-size:.65rem;
+  padding:.5rem .6rem;
+  min-height:36px;
+  justify-content:center;
+  white-space:nowrap;
+}
+
+/* ── CLIENT ACCOUNTS TABLE MOBILE ── */
+.entries-table{
+  overflow-x:auto;
+}
+.entry-row[style*="grid-template-columns:1.2fr"]{
+  grid-template-columns:1fr 1fr 80px !important;
+  padding:.8rem 1rem;
+}
+.entry-row[style*="grid-template-columns:1.2fr"] .td:nth-child(2),
+.entry-row[style*="grid-template-columns:1.2fr"] .td:nth-child(3),
+.entry-row[style*="grid-template-columns:1.2fr"] .td:nth-child(4),
+.entry-row[style*="grid-template-columns:1.2fr"] .td:nth-child(5),
+.entry-row[style*="grid-template-columns:1.2fr"] .td:nth-child(6){
+  display:none;
+}
+
+/* Fix table header on mobile */
+div[style*="grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 80px"]{
+  grid-template-columns:1fr 1fr 80px !important;
+  padding:.7rem 1rem;
+}
+div[style*="grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 80px"] .th:nth-child(2),
+div[style*="grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 80px"] .th:nth-child(3),
+div[style*="grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 80px"] .th:nth-child(4),
+div[style*="grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 80px"] .th:nth-child(5),
+div[style*="grid-template-columns:1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 80px"] .th:nth-child(6){
+  display:none;
+}
+
+/* ── ADMIN BODY PADDING ── */
+.admin-body{padding:1rem}
+
+  nav{padding:1rem 1rem 1rem 4.5rem}
+nav.scrolled{padding:.8rem 1rem .8rem 4.5rem}
+.nav-links{display:none}
+
+  /* User header mobile fix */
+.user-header{
+  padding:.9rem 1rem .9rem 4.5rem;
+  gap:.8rem;
+}
+.user-header-logo{
+  font-size:1rem;
+  white-space:nowrap;
+}
+.user-header-right{
+  gap:1rem;
+  flex-shrink:0;
+}
+.user-welcome{
+  font-size:.72rem;
+  white-space:nowrap;
+}
+.admin-btn{
+  font-size:.65rem;
+  padding:.4rem .8rem;
+  min-height:32px;
+  white-space:nowrap;
+}
+
+/* User body mobile */
+.user-body{padding:1rem 1rem 3rem}
+.user-banner{padding:1.5rem}
+.user-banner h2{font-size:1.5rem}
+.user-banner p{font-size:.82rem}
+
+/* 2 column stat grid on mobile */
+.user-grid{grid-template-columns:1fr}
+
   /* ── NAV ── */
   nav{padding:1rem 1.2rem 1rem 4.5rem}
   nav.scrolled{padding:.8rem 1.2rem .8rem 4.5rem}
   .nav-links{display:none}
-  .nav-logo{margin-left:0;font-size:1.1rem}
-  .nav-cta{font-size:.7rem;padding:.5rem 1rem;min-height:38px}
+.nav-logo{
+  margin-left:3.5rem;
+  font-size:1.1rem;
+  white-space:nowrap;
+}  .nav-cta{font-size:.7rem;padding:.5rem 1rem;min-height:38px}
 
   /* ── HERO ── */
-  #hero{grid-template-columns:1fr;padding:6rem 1.2rem 3rem;gap:2rem}
+  #hero{
+  grid-template-columns:1fr;
+  padding:5rem 1.5rem 3rem;
+  gap:1.5rem;
+  min-height:auto;
+}
+/* Hero mobile fixes */
+.hero-eyebrow{margin-bottom:1rem}
+.hero-headline{font-size:2.6rem;letter-spacing:-.5px;margin-bottom:1rem}
+.hero-sub{font-size:.88rem;margin-bottom:1.8rem;max-width:100%}
+
+/* Buttons full width on mobile */
+.btn-row{
+  flex-direction:column;
+  align-items:stretch;
+  gap:.8rem;
+  width:100%;
+}
+.btn-primary{
+  width:100%;
+  justify-content:center;
+  text-align:center;
+  padding:1rem;
+}
+.btn-insta{
+  width:100%;
+  justify-content:center;
+  padding:1rem;
+}
+.btn-ghost{
+  justify-content:center;
+  padding:.5rem 0;
+}
   .hero-right{display:none}
   .hero-headline{font-size:clamp(2.4rem,8vw,3.5rem)}
   .hero-sub{font-size:.88rem;max-width:100%}
@@ -495,8 +724,14 @@ textarea{resize:vertical;min-height:110px;line-height:1.7}
   .ca-edit-grid,.ca-edit-grid-2{grid-template-columns:1fr 1fr}
 
   /* ── USER DASHBOARD ── */
-  .user-header{padding:.9rem 1.2rem;flex-wrap:wrap;gap:.6rem}
-  .user-header-right{gap:.8rem;flex-wrap:wrap}
+.user-header{
+  background:var(--black);
+  padding:1.8rem 6rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(15,118,110,.2);
+}  .user-header-right{gap:.8rem;flex-wrap:wrap}
   .user-welcome{font-size:.72rem}
   .user-body{padding:1.2rem 1rem 3rem}
   .user-banner{padding:1.8rem 1.2rem;border-radius:12px;margin-bottom:1.2rem}
